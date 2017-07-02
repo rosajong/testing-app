@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'cms',
     'menus',
     'treebeard',
-    'sekizai'
+    'sekizai',
+    'filer',
+    'easy_thumbnails',
+    'mptt',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -88,7 +91,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'testingapp.wsgi.application'
 
+THUMBNAIL_HIGH_RESOLUTION = True
 
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters'
+)
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
