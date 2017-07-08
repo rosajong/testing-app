@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'djangocms_snippet',
     'djangocms_style',
     'djangocms_column',
+    'home',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -77,6 +78,7 @@ ROOT_URLCONF = 'testingapp.urls'
 
 CMS_TEMPLATES = [
     ('home.html', 'Home page template'),
+    ('sprint_plugin.html', 'Sprint template'),
 ]
 
 TEMPLATES = [
