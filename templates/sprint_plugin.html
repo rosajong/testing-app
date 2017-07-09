@@ -2,4 +2,9 @@
 {% block extrastatic %}
     <link rel="stylesheet" href="{% static 'sprint.css' %}">
 {% endblock %}
+<div class="sprint">
 <h1>Sprint {{instance.sprint_number}}</h1>
+<h3>Sprint {{instance.starting_date}}</h3>
+<h3>Sprint {{instance.ending_date}}</h3>
+<h4>Sprint {{instance.description}}</h4>
+</div>
