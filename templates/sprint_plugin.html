@@ -1,1 +1,5 @@
+{% load cms_tags static %}
+{% block extrastatic %}
+    <link rel="stylesheet" href="{% static 'sprint.css' %}">
+{% endblock %}
 <h1>Sprint {{instance.sprint_number}}</h1>
