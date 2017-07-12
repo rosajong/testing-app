@@ -1,6 +1,7 @@
 from django.db import models
 from cms.models.pluginmodel import CMSPlugin
 from datetime import date
+from filer.fields.image import FilerImageField
 
 
 class Sprint(CMSPlugin):
@@ -35,4 +36,33 @@ class Sprint(CMSPlugin):
 class Tester(CMSPlugin):
     first_name = models.CharField(max_length=32, null=True, blank=True)
     last_name = models.CharField(max_length=32, null=True, blank=True)
+    notes = models.TextField()
+
+
+class Process(CMSPlugin):
+    """
+    Process plugin is designed to describe one company process and the state
+    of the test cases. A process can have multiple testers.
+    """
+    TS = "To Start"
+    ID = "In development"
+    BR = "Being reviewed"
+    RFT = "Ready for test"
+    T = "Being tested"
+    TF = "Tested, findings in progress"
+    TFD = "Tested, findings solved"
+    fase_test_cases_choices = (
+        (TS, "To Start"),
+        (ID, "In development"),
+        (BR, "Being reviewed"),
+        (RFT, "Ready for test"),
+        (T, "Being tested"),
+        (TF, "Tested, findings in progress"),
+        (TFD, "Tested, findings solved"),
+    )
+    name = models.CharField(max_length=128, null=True, blank=True)
+    number = models.CharField(max_length=12, null=True, blank=True)
+    fase_test_cases = models.CharField(max_length=24, choices=fase_test_cases_choices, default="To Start")
+    testers = models.ManyToManyField(Tester)
+    process_model = FilerImageField(null=True, blank=True, related_name="process_model")
     notes = models.TextField()
