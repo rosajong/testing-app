@@ -30,3 +30,9 @@ class Sprint(CMSPlugin):
     starting_date = models.DateField(default=date.today)
     ending_date = models.DateField(default=date.today)
     description = models.TextField(null=True, blank=True)
+
+
+class Tester(CMSPlugin):
+    first_name = models.CharField(max_length=32, null=True, blank=True)
+    last_name = models.CharField(max_length=32, null=True, blank=True)
+    notes = models.TextField()
