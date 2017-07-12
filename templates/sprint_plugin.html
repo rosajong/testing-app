@@ -2,12 +2,15 @@
 {% block extrastatic %}
     <link rel="stylesheet" href="{% static 'sprint.css' %}">
 {% endblock %}
+
 <div class="sprint">
   <div class="sprint-info">
+
 <h1>Sprint {{instance.sprint_number}}</h1>
 <h3>{{instance.starting_date}}</h3>
 -
 <h3>{{instance.ending_date}}</h3>
 <h4>{{instance.description}}</h4>
-</div>
+
+  </div>
 </div>

@@ -1,4 +1,7 @@
 {% load static cms_tags sekizai_tags %}
+{% block extrastatic %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+{% endblock %}
 <html>
     <head>
         <title>{% page_attribute "page_title" %}</title>

@@ -1,8 +1,12 @@
 .sprint {
   max-width: 350px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border: 1px grey solid;
+    margin: 30px;
+    border: 1px #DCDCDC solid;
+    display: inline-block;
+    vertical-align: top;
+    height: 300px;
+    border-radius: 2px;
+    background-color: #FAFAFA;
 }
 
 .sprint h1 {
@@ -17,6 +21,7 @@
     margin: 0;
 padding-top: 10px;
 padding-bottom: 10px;
+height: 40px;
 }
 
 .sprint h3 {
@@ -29,6 +34,7 @@ font-weight: 300;
 font-size: 15px;
 width: 40%;
 text-align: center;
+height: 20px;
 
 }
 
@@ -38,5 +44,8 @@ text-align: center;
 padding-left: 5%;
 font-family: sans-serif;
 font-weight: 100;
+margin-top: 0;
+max-height: 200px;
+overflow: scroll;
 
 }
