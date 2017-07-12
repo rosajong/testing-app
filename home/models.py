@@ -5,19 +5,28 @@ from datetime import date
 
 class Sprint(CMSPlugin):
     RL = "Real Life Sprint"
+    One = "1"
+    Two = "2"
+    Three = "3"
+    Four = "4"
+    Five = "5"
+    Six = "6"
+    Seven = "7"
+    Eight = "8"
+    Nine = "9"
     sprint_number_choices = (
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
-        (6, '6'),
-        (7, '7'),
-        (8, '8'),
-        (9, '9'),
+        (One, "1"),
+        (Two, "2"),
+        (Three, "3"),
+        (Four, "4"),
+        (Five, "5"),
+        (Six, "6"),
+        (Seven, "7"),
+        (Eight, "8"),
+        (Nine, "9"),
         (RL, "Real Life Sprint"),
     )
-    sprint_number = models.CharField(max_length=16, choices=sprint_number_choices, default='1')
+    sprint_number = models.CharField(max_length=16, choices=sprint_number_choices, default="1")
     starting_date = models.DateField(default=date.today)
     ending_date = models.DateField(default=date.today)
     description = models.TextField(null=True, blank=True)
