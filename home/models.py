@@ -32,6 +32,10 @@ class Sprint(CMSPlugin):
     ending_date = models.DateField(default=date.today)
     description = models.TextField(null=True, blank=True)
 
+    def get_absolute_url(self):
+
+        return reverse('sprint-view', kwargs={'pk': self.id})
+
 
 class Tester(CMSPlugin):
     first_name = models.CharField(max_length=32, null=True, blank=True)

@@ -17,8 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from home.views import SprintView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^sprint/(?P<pk>\d+)/$', SprintView.as_view(template_name='sprint_page.html'),
+        name='sprint-view',),
     url(r'^', include('cms.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

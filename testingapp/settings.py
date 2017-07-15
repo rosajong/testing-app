@@ -79,6 +79,7 @@ ROOT_URLCONF = 'testingapp.urls'
 CMS_TEMPLATES = [
     ('home.html', 'Home page template'),
     ('sprint_plugin.html', 'Sprint template'),
+    ('sprint_page.html', 'Sprint page'),
 ]
 
 TEMPLATES = [
@@ -92,6 +93,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.request',
                 'sekizai.context_processors.sekizai',
                 'cms.context_processors.cms_settings',
             ],
