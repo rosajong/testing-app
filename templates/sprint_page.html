@@ -1,3 +1,13 @@
-<h1>Sprint {{object.sprint_number}}</h1>
+{% load cms_tags static %}
+{% block extrastatic %}
+    <link rel="stylesheet" href="{% static 'sprint-page.css' %}">
+{% endblock %}
+
+<div class="sprint-page">
+  <a href="/">Go back!</a>
+<h1>Sprint: {{object.sprint_number}}</h1>
+<div class="sprint-information">
 <h3>{{object.starting_date}}</h3>-<h3>{{object.ending_date}}</h3>
 <h4>{{object.description}}</h4>
+</div>
+</div>

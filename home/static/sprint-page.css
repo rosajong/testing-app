@@ -1,0 +1,58 @@
+.sprint-page h1 {
+  display: inline-block;
+  background-color: lightgray;
+  color: white;
+  font-weight: 100;
+  font-size: 26pt;
+  font-family: sans-serif;
+  width: 100%;
+    text-align: center;
+    margin: 0;
+padding-top: 10px;
+padding-bottom: 10px;
+height: 40px;
+}
+
+.sprint-information {
+  width: 60%;
+  margin: auto;
+}
+
+.sprint-page a {
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: deeppink;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: super;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.sprint-page h3 {
+  display: inline-block;
+  font-family: sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 15px;
+  width: 49.5%;
+  text-align: center;
+  height: 20px;
+
+}
+
+.sprint-page h4 {
+  display: inline-block;
+  width: 90%;
+padding-left: 5%;
+font-family: sans-serif;
+font-weight: 100;
+margin-top: 0;
+max-height: 200px;
+overflow: scroll;
+
+}
