@@ -82,6 +82,12 @@ CMS_TEMPLATES = [
     ('sprint_page.html', 'Sprint page'),
 ]
 
+CMS_PLACEHOLDER_CONF = {
+    'processes': {
+        "plugins": ['ProcessPlugin'],
+    },
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

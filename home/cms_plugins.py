@@ -2,7 +2,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 
-from .models import Sprint, Tester, Process
+from .models import Sprint, Process, Tester
 
 class SprintPlugin(CMSPluginBase):
     model = Sprint
